@@ -58,6 +58,7 @@ namespace NET.W._2019.Titkov._01
                     $"\nOther = Exit." +
                     $"\nYour choice: ");
             } while (!int.TryParse(Console.ReadLine(), out choice));
+            Console.WriteLine();
 
             switch (choice)
             {
@@ -81,6 +82,8 @@ namespace NET.W._2019.Titkov._01
                     Console.WriteLine("Exit.\n");
                     break;
             }
+
+            Console.ReadKey();
         }
 
         /// <summary>
