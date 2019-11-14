@@ -7,3 +7,4 @@
   
 ### Sign
 1. Generate key pair with `sn -k IvanTitkov.snk`
+2. Compile "Program.cs" with `csc Program.cs /addmodule:Test.netmodule;QuickSort.netmodule;MergeSort.netmodule /keyfile:IvanTitkov.snk`
