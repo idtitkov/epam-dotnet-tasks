@@ -1,8 +1,12 @@
-﻿using System;
+﻿/*
+Day 1 Task
+Merge sort algorithm.
+
+Ivan Titkov 14.11.2019
+*/
+
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NET.W._2019.Titkov._01
 {
@@ -11,6 +15,12 @@ namespace NET.W._2019.Titkov._01
     /// </summary>
     static class MergeSort
     {
+        /// <summary>
+        /// Sorts list with "Merge sort" algorithm.
+        /// </summary>
+        /// <returns>
+        /// Sorted list.
+        /// </returns>
         public static List<int> Sort(List<int> unsorted)
         {
             if (unsorted.Count <= 1)
@@ -34,6 +44,9 @@ namespace NET.W._2019.Titkov._01
             return Merge(left, right);
         }
 
+        /// <summary>
+        /// Service method to make "Merge sort".
+        /// </summary>
         private static List<int> Merge(List<int> left, List<int> right)
         {
             List<int> result = new List<int>();

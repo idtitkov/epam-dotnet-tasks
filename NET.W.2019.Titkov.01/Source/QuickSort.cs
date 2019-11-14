@@ -1,8 +1,11 @@
-﻿using System;
+﻿/*
+Day 1 Task
+Quick sort algorithm.
+
+Ivan Titkov 14.11.2019
+*/
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NET.W._2019.Titkov._01
 {
@@ -19,13 +22,14 @@ namespace NET.W._2019.Titkov._01
             if (left < right)
             {
                 int pivotIdx = Partition(list, left, right);
-                //Console.WriteLine("MQS " + left + " " + right);
-                //DumpList(list);
                 Sort(list, left, pivotIdx - 1);
                 Sort(list, pivotIdx, right);
             }
         }
 
+        /// <summary>
+        /// Service method to make "Quick sort".
+        /// </summary>
         private static int Partition(List<int> list, int left, int right)
         {
             int start = left;
