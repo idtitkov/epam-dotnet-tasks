@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace NET.W._2019.Titkov._08
 {
+    /// <summary>
+    /// Card types.
+    /// </summary>
     public enum Grades
     {
         Base = 1,

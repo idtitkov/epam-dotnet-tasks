@@ -10,6 +10,15 @@ namespace NET.W._2019.Titkov._08
     {
         private BankStorage bankStorage = new BankStorage();
 
+        /// <summary>
+        /// Creates new bank account.
+        /// </summary>
+        /// <param name="firstName">First name</param>
+        /// <param name="surname">Surname</param>
+        /// <param name="balance">Balance</param>
+        /// <param name="bonus">Bonus</param>
+        /// <param name="grade">Card grade</param>
+        /// <returns>Id of account created.</returns>
         public int CreateAccount(string firstName, string surname, double balance, int bonus, Grades grade)
         {
             bool isAccountUnique = true;
@@ -43,6 +52,11 @@ namespace NET.W._2019.Titkov._08
             return newAccount.Id;
         }
 
+        /// <summary>
+        /// Closes account.
+        /// </summary>
+        /// <param name="firstName">First name</param>
+        /// <param name="surname">Surname</param>
         public void CloseAccount(string firstName, string surname)
         {
             bankStorage.AllAccounts = bankStorage.AllAccounts.Where(x => x.FirstName != firstName && x.Surname != surname).ToList();
@@ -50,6 +64,11 @@ namespace NET.W._2019.Titkov._08
             bankStorage.Synchronize();
         }
 
+        /// <summary>
+        /// Increases account balance with selected Id on choosen amount.
+        /// </summary>
+        /// <param name="id">Id</param>
+        /// <param name="amount">Amount</param>
         public void DepositMoney(int id, double amount)
         {
             int index = bankStorage.AllAccounts.FindIndex(account => account.Id == id);
@@ -61,6 +80,11 @@ namespace NET.W._2019.Titkov._08
             bankStorage.Synchronize();
         }
 
+        /// <summary>
+        /// Decreases account balance with selected Id on choosen amount.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="amount"></param>
         public void WithdrawMoney(int id, double amount)
         {
             int index = bankStorage.AllAccounts.FindIndex(account => account.Id == id);
@@ -72,6 +96,9 @@ namespace NET.W._2019.Titkov._08
             bankStorage.Synchronize();
         }
 
+        /// <summary>
+        /// Shows all existing accounts.
+        /// </summary>
         public void ShowAll()
         {
             foreach (var account in bankStorage.AllAccounts)

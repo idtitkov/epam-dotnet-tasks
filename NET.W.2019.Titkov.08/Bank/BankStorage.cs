@@ -12,13 +12,22 @@ namespace NET.W._2019.Titkov._08
         private readonly string filePath = @"D:\Downloads\accounts.dat";
         private List<BankAccount> allAccounts = new List<BankAccount>();
 
+        /// <summary>
+        /// Ctor.
+        /// </summary>
         public BankStorage()
         {
             ReadFromFile();
         }
 
+        /// <summary>
+        /// List of accounts returned from storage.
+        /// </summary>
         public List<BankAccount> AllAccounts { get => allAccounts; set => allAccounts = value; }
 
+        /// <summary>
+        /// Saves changes to storage.
+        /// </summary>
         public void Synchronize()
         {
             WriteToFile();
