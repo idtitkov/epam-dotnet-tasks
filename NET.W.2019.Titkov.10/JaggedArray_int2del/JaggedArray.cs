@@ -68,7 +68,7 @@ namespace NET.W._2019.Titkov._06
                 for (int j = 0; j < arr.Length - 1; j++)
                 {
                     // Delegate invoke.
-                    if (comparer.Invoke(arr[j], arr[j + 1]) >= 1)
+                    if (comparer.Invoke(arr[j], arr[j + 1]) > 0)
                     {
                         var temp = arr[j + 1];
                         arr[j + 1] = arr[j];
