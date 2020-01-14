@@ -7,7 +7,7 @@ https://github.com/AnzhelikaKravchuk/2017-2018.MMF.BSU
 https://habrahabr.ru/company/it-grad/blog/341486/  
 результирующим является XML-документ вида (можно использовать любую XML технологию без ограничений)  
 
-![alt text](https://github.com/idtitkov/epam-dotnet-tasks/blob/master/NET.W.2019.Titkov.19/xml-result.png)
+![alt text](https://github.com/idtitkov/epam-dotnet-tasks/blob/master/NET.W.2019.Titkov.17/xml-result.png)
 
 Для тех URL-адресов, которые не совпадают с данным паттерном, “залогировать” информацию, отметив указанные строки, как необработанные.  
 Продемонстрировать работу на примере консольного приложения.  
